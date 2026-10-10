@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Strength and Stretch Plan, Oct 9 to Dec 10</title>
+<title>Strength, Pilates and Stretch Plan, Oct 9 to Dec 10</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -140,7 +140,7 @@ h2,h3,h4{font-family:var(--head);margin:0}
 </head>
 <body>
 <div class="wrap">
-  <h1>Strength and stretch plan</h1>
+  <h1>Strength, pilates and stretch plan</h1>
   <p class="lede">Friday October 9 to Thursday December 10, built around free weights at home. Pick any day on the calendar to see the workout, with a moving diagram for each exercise.</p>
 
   <div class="phases" id="phases" aria-label="Training phases"></div>
@@ -170,11 +170,11 @@ h2,h3,h4{font-family:var(--head);margin:0}
           <span><i style="background:var(--cA)"></i>Day A</span>
           <span><i style="background:var(--cB)"></i>Day B</span>
           <span><i style="background:var(--cC)"></i>Day C</span>
-          <span><i style="background:var(--cMob)"></i>Stretch</span>
+          <span><i style="background:var(--cMob)"></i>Pilates</span>
           <span><i style="background:var(--cWalk)"></i>Walk</span>
           <span><i style="background:transparent;border-style:dashed"></i>Rest</span>
         </div>
-        <p class="week-line">Strength on Mon, Wed and Fri, rotating A, B, C. Stretch on Tue and Thu. Walk on Saturday. Rest on Sunday.</p>
+        <p class="week-line">Strength on Mon, Wed and Fri, rotating A, B, C. Mat pilates on Tue and Thu. Walk on Saturday. Rest on Sunday.</p>
       </div>
     </div>
 
@@ -259,7 +259,25 @@ var EX={
   B:{H:[54,128],S:[70,112],P:[150,112],K:[150,156],A:[190,158],E:[70,136],W:[70,158],M:[110,82]}},
  squatHold:{name:'Deep squat hold',db:0,hold:1,dose:'30-60 sec',cue:'Feet a little wider than your hips. Sink low, press your elbows against your knees, and keep your chest up.',
   A:{H:[118,78],S:[112,92],P:[100,136],K:[136,116],A:[118,160],E:[124,116],W:[121,100]},
-  B:{H:[116,76],S:[110,90],P:[98,142],K:[134,120],A:[118,160],E:[124,120],W:[120,104]}}
+  B:{H:[116,76],S:[110,90],P:[98,142],K:[134,120],A:[118,160],E:[124,120],W:[120,104]}},
+ pelvicCurl:{name:'Pelvic curl',db:0,dose:'8-10 slow reps',cue:'Lie on your back with knees bent. Peel your spine off the floor one bone at a time, then roll back down slowly.',
+  A:LYX({E:[82,156],W:[108,156]}),
+  B:{H:[34,152],S:[58,154],P:[112,122],K:[150,122],A:[162,158],E:[84,156],W:[110,156]}},
+ hundred:{name:'The hundred',db:0,dose:'Build up to 100 pumps',cue:'Curl your head and shoulders up, legs at tabletop or reaching out at 45 degrees. Pump your arms, breathing in for 5 pumps and out for 5.',
+  A:{H:[34,152],S:[56,154],P:[106,154],K:[106,110],A:[138,110],E:[84,155],W:[112,153]},
+  B:{H:[46,128],S:[62,138],P:[106,154],K:[134,126],A:[164,100],E:[88,146],W:[116,142]}},
+ rollUp:{name:'Roll-up',db:0,dose:'6-8 slow reps',cue:'Start with your arms overhead. Peel your spine up one bone at a time and reach over your legs, then lower down with the same control.',
+  A:{H:[34,152],S:[56,154],P:[106,154],K:[146,155],A:[186,158],E:[30,153],W:[6,151],M:[81,154]},
+  B:{H:[162,112],S:[150,124],P:[106,154],K:[146,155],A:[186,158],E:[172,138],W:[192,150],M:[112,112]}},
+ singleLeg:{name:'Single-leg stretch',db:0,dose:'8 per side',cue:'Head and shoulders curled up. Pull one knee in while the other leg reaches long, then switch.',
+  A:{H:[46,130],S:[64,140],P:[106,154],K:[116,118],A:[146,128],K2:[144,140],A2:[180,128],E:[92,128],W:[116,118]},
+  B:{H:[46,130],S:[64,140],P:[106,154],K:[144,140],A:[180,128],K2:[116,118],A2:[146,128],E:[92,128],W:[116,118]}},
+ legCircle:{name:'Leg circles',db:0,dose:'5 each way per leg',cue:'One leg reaches to the ceiling, the other stays long on the floor. Draw small circles with the raised leg while your pelvis stays still.',
+  A:{H:[34,152],S:[56,154],P:[106,154],K:[98,118],A:[90,82],K2:[146,155],A2:[186,158],E:[82,156],W:[108,156]},
+  B:{H:[34,152],S:[56,154],P:[106,154],K:[120,118],A:[130,84],K2:[146,155],A2:[186,158],E:[82,156],W:[108,156]}},
+ swimming:{name:'Swimming',db:0,dose:'3 rounds of 20 pumps',cue:'Lie face down and lift your arms, chest, and legs slightly. Flutter the opposite arm and leg up and down with steady breathing.',
+  A:{H:[44,134],S:[62,146],P:[110,152],K:[146,146],A:[184,136],K2:[146,152],A2:[184,156],E:[36,138],W:[10,128],E2:[36,152],W2:[10,154]},
+  B:{H:[44,134],S:[62,146],P:[110,152],K:[146,152],A:[184,156],K2:[146,146],A2:[184,136],E:[36,152],W:[10,154],E2:[36,138],W2:[10,128]}}
 };
 
 var DAYS={
@@ -269,7 +287,7 @@ var DAYS={
 };
 var C_TWEAK={goblet:{name:'Tempo goblet squat',cue:'Lower for a slow count of 3, pause for a second at the bottom, then stand. A wider sumo stance works too.'}};
 var COOL=['hipFlexor','hamstring','figure4','chestDoor','childs','crossBody'];
-var MOB=['catCow','squatHold','hipFlexor','childs','figure4'];
+var PIL=['catCow','pelvicCurl','hundred','rollUp','singleLeg','legCircle','swimming','childs'];
 
 var PHASES=[
  {name:'Foundation',from:'2026-10-09',to:'2026-10-25',main:2,acc:2,text:'Learn the movements. Pick a weight where you could do about 3 more reps at the end of each set, and move slowly.'},
@@ -287,7 +305,7 @@ var PLAN={},rot=0,TOTAL=0,order=['A','B','C'];
 for(var d=new Date(START);d<=END;d.setDate(d.getDate()+1)){
   var k=key(d),dow=d.getDay(),t;
   if(dow===1||dow===3||dow===5){t=order[rot%3];rot++;TOTAL++;}
-  else if(dow===2||dow===4){t='mob';}
+  else if(dow===2||dow===4){t='pil';}
   else if(dow===6){t='walk';}
   else{t='rest';}
   PLAN[k]={date:new Date(d),type:t,phase:phaseFor(k)};
@@ -386,7 +404,7 @@ function renderCal(){
     if(!p){h+='<div class="day out" aria-hidden="true"><span class="n">'+day+'</span></div>';continue;}
     var cls='day',tag,label;
     if(p.type==='A'||p.type==='B'||p.type==='C'){cls+=' t'+p.type;tag='<span class="tg">'+p.type+'</span>';label='Day '+p.type+' strength';}
-    else if(p.type==='mob'){cls+=' tmob';tag='<span class="tg sm">Stretch</span>';label='stretch day';}
+    else if(p.type==='pil'){cls+=' tmob';tag='<span class="tg sm">Pilates</span>';label='mat pilates day';}
     else if(p.type==='walk'){cls+=' twalk';tag='<span class="tg sm">Walk</span>';label='walk day';}
     else{cls+=' rest';tag='<span class="tg sm">Rest</span>';label='rest day';}
     if(k===state.sel)cls+=' sel';
@@ -420,7 +438,7 @@ function renderDetail(){
   figs.length=0;
   var badge,sub,title;
   if(strength){badge='<span class="badge b'+type+'">'+DAYS[type].title+'</span>';sub=DAYS[type].sub;}
-  else if(type==='mob'){badge='<span class="badge bmob">Stretch</span>';sub='Easy mobility, 10 to 15 minutes';}
+  else if(type==='pil'){badge='<span class="badge bmob">Pilates</span>';sub='Mat pilates, 20 to 25 minutes';}
   else if(type==='walk'){badge='<span class="badge bwalk">Walk</span>';sub='Easy movement, no weights';}
   else{badge='<span class="badge" style="background:var(--line);color:var(--ink)">Rest</span>';sub='Recovery day';}
   h+='<div class="d-head"><div><h2>'+dateStr+'</h2><p class="d-sub">'+badge+sub+'. Week '+wk+' of 10, '+ph.name.toLowerCase()+' phase.</p></div>';
@@ -440,10 +458,10 @@ function renderDetail(){
     h+='<h3 class="sec">Cool down<small>about 10 minutes</small></h3><div class="cards">';
     COOL.forEach(function(c){h+=card(c,0,EX[c].dose);});
     h+='</div>';
-  }else if(type==='mob'){
-    h+='<p class="note">Slow and easy. Nothing here should hurt. Move through the list once, spending the time shown on each one.</p>';
-    h+='<h3 class="sec">Mobility routine<small>10 to 15 minutes</small></h3><div class="cards">';
-    MOB.forEach(function(c,i){h+=card(c,i+1,EX[c].dose);});
+  }else if(type==='pil'){
+    h+='<p class="note">Slow, controlled movements. Breathe in through your nose and out through your mouth, and stop a rep before your form slips. Nothing should pinch or strain your neck or lower back.</p>';
+    h+='<h3 class="sec">Mat pilates routine<small>20 to 25 minutes</small></h3><div class="cards">';
+    PIL.forEach(function(c,i){h+=card(c,i+1,EX[c].dose);});h+='</div>';h+='<h3 class="sec">Optional finish<small>2 to 3 minutes</small></h3><div class="cards">'+card('hipFlexor',0,EX.hipFlexor.dose)+card('hamstring',0,EX.hamstring.dose);
     h+='</div>';
   }else if(type==='walk'){
     h+='<p class="note">Take a 30 minute walk at an easy pace. If you have a few minutes afterward, these two stretches feel good on tired legs.</p>';
